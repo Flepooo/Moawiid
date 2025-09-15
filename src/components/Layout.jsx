@@ -1,13 +1,17 @@
 // src/components/Layout.jsx
+import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
+import { Outlet } from "react-router-dom";
 
-export default function Layout({ children }) {
+export default function Layout() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
       <Header />
-      <main className="flex-grow container mx-auto p-4">{children}</main>
+      <div className="min-h-screen">
+        <Outlet />
+      </div>
       <Footer />
-    </div>
+    </>
   );
 }
