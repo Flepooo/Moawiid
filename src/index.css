@@ -5,3 +5,8 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+#ar {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-style: normal;
+}

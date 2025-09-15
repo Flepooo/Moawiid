@@ -36,55 +36,6 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
-      {/* Header */}
-      <header className="sticky top-0 z-40 border-b border-gray-200 bg-white/80 backdrop-blur">
-        <div className="container mx-auto px-4">
-          <div className="flex h-16 items-center justify-between">
-            <div className="flex items-center gap-3">
-              <button
-                className="md:hidden rounded-xl border border-gray-300 p-2 hover:border-gray-900"
-                onClick={() => setSidebarOpen(true)}
-                aria-label="Open navigation"
-              >
-                <MenuIcon className="h-5 w-5" />
-              </button>
-              <a href="#" className="flex items-center gap-2">
-                <div className="grid h-9 w-9 place-items-center rounded-xl bg-gray-900 text-white font-bold">L</div>
-                <span className="text-lg font-bold">ClinicsOS</span>
-              </a>
-            </div>
-
-            {/* Search */}
-            <div className="hidden md:flex items-center w-full max-w-lg">
-              <div className="relative w-full">
-                <SearchIcon className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500" />
-                <input
-                  type="search"
-                  placeholder="Search patients, appointments, invoices…"
-                  className="w-full rounded-2xl border border-gray-300 pl-9 pr-4 py-2.5 focus:border-gray-900 focus:outline-none"
-                />
-              </div>
-            </div>
-
-            {/* Right actions */}
-            <div className="flex items-center gap-2">
-              <button className="hidden sm:inline-flex items-center gap-2 rounded-2xl border border-gray-300 px-3 py-2 font-semibold hover:border-gray-900">
-                <PlusIcon className="h-4 w-4" /> New
-              </button>
-              <button className="rounded-xl border border-gray-300 p-2 hover:border-gray-900" aria-label="Notifications">
-                <BellIcon className="h-5 w-5" />
-              </button>
-              <div className="relative">
-                <button className="flex items-center gap-2 rounded-2xl border border-gray-300 px-2 py-1.5 hover:border-gray-900">
-                  <img src="https://i.pravatar.cc/64?img=13" alt="User" className="h-7 w-7 rounded-full object-cover" />
-                  <span className="hidden sm:inline text-sm font-semibold">Youssef</span>
-                  <ChevronDownIcon className="h-4 w-4" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
 
       {/* Layout */}
       <div className="container mx-auto px-4">

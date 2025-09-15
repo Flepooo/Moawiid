@@ -12,6 +12,9 @@ import RequestDemo from "./Demo";
 import Dashboard from "./pages/dashboard/Home";
 import Layout from "./components/Layout";
 import DashboardLayout from "./components/DashboardLayout";
+import { NotFoundDashboard } from "./pages/dashboard/404Dashboard";
+import { NotFoundMain } from "./pages/mainwebsite/404Main";
+import ComingSoon from "./Soon";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -19,18 +22,29 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Routes>
         {/* Main website layout with header/footer */}
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+        <Route path="/">
+          <Route index element={<ComingSoon />} />
+
+          <Route path="*" element={<NotFoundMain />} />
+        </Route>
+
+        <Route path="/portal" element={<Layout />}>
+          <Route index element={<ComingSoon />} />
+          <Route path="home" element={<Home />} />
           <Route path="demo" element={<RequestDemo />} />
           <Route path="contact" element={<Contact />} />
           <Route path="services" element={<Services />} />
           <Route path="login" element={<Login />} />
+
+          <Route path="*" element={<NotFoundMain />} />
         </Route>
 
         {/* Dashboard layout without header/footer */}
         <Route path="/dashboard" element={<DashboardLayout />}>
           <Route index element={<Dashboard />} />
-          {/* Add more dashboard subroutes here if needed */}
+          {/* Add more dashboard subroutes here */}
+          <Route path="*" element={<NotFoundDashboard />} />
+
         </Route>
       </Routes>
     </BrowserRouter>
